@@ -8,5 +8,6 @@ import SearchBar from './SearchBar';
 import Button from './Button';
 import Banner from './Banner';
 import Input from './Input';
+import Subscribe from './Subscribe';
 
-export { Navbar, Footer, Modal, CreatorCard, NFTCard, Loader, SearchBar, Button, Banner, Input };
+export { Navbar, Footer, Modal, CreatorCard, NFTCard, Loader, SearchBar, Button, Banner, Input, Subscribe };
