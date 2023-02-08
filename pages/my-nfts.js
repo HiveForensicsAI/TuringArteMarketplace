@@ -67,9 +67,9 @@ const MyNFTs = () => {
 
   return (
     <div className="w-full flex justify-start items-center flex-col min-h-screen">
-      <div className="w-full flexCenter flex-col">
+      <div className="w-full flexCenter flex-col" style={{ marginTop: '50px' }}>
         <Banner
-          name="Your Nifty NFTs"
+          name="Your Turing Arte NFTs"
           childStyles="text-center mb-4"
           parentStyle="h-80 justify-center"
         />
