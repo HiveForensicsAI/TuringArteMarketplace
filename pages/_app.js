@@ -1,9 +1,17 @@
+import React from 'react';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 
 import { Navbar, Footer } from '../components';
 import '../styles/globals.css';
 import { NFTProvider } from '../context/NFTContext';
+
+// if (typeof window === 'undefined') {
+//   require('dotenv').config();
+// }
+
+// const projectId = process.env.INFURA_PROJECT_ID;
+// const projectSecret = process.env.INFURA_PROJECT_SECRET;
 
 const MyApp = ({ Component, pageProps }) => (
   <ThemeProvider attribute="class">
@@ -22,3 +30,4 @@ const MyApp = ({ Component, pageProps }) => (
 );
 
 export default MyApp;
+

@@ -8,6 +8,7 @@ import SearchBar from './SearchBar';
 import Button from './Button';
 import Banner from './Banner';
 import Input from './Input';
+// eslint-disable-next-line import/no-cycle
 import Subscribe from './Subscribe';
 
 export { Navbar, Footer, Modal, CreatorCard, NFTCard, Loader, SearchBar, Button, Banner, Input, Subscribe };

@@ -9,14 +9,29 @@ import { NFTContext } from '../context/NFTContext';
 import { Button, Input, Loader } from '../components';
 import images from '../assets';
 
-const projectId = "2Krbekx8wTJWoIJ8SqJC58Fc9LX";
-const projectSecret = "86bf21d70308367da8022c42640daed1";
-const auth =
-  "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
+// require('dotenv').config();
+
+// const projectId = process.env.INFURA_PROJECT_ID;
+// const projectSecret = process.env.INFURA_PROJECT_SECRET;
+
+// const auth =
+//   "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
+// const client = ipfsHttpClient({
+//   host: "ipfs.infura.io",
+//   port: 5001,
+//   protocol: "https",
+//   headers: {
+//     authorization: auth,
+//   },
+// });
+const projectId = '2Krbekx8wTJWoIJ8SqJC58Fc9LX';
+const projectSecret = '86bf21d70308367da8022c42640daed1';
+
+const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
 const client = ipfsHttpClient({
-  host: "ipfs.infura.io",
+  host: 'ipfs.infura.io',
   port: 5001,
-  protocol: "https",
+  protocol: 'https',
   headers: {
     authorization: auth,
   },
@@ -75,7 +90,7 @@ const CreateNFT = () => {
     try {
       const added = await client.add(data);
       const url = `https://test777.infura-ipfs.io/ipfs/${added.path}`;
-   
+
       /* after file is uploaded to IPFS, pass the URL to save it on Polygon */
       await createSale(url, formInput.price);
       router.push('/');

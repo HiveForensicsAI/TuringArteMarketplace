@@ -193,6 +193,7 @@ const NFTDetails = () => {
           handleClose={() => setSuccessModal(false)}
         />
       )}
+      {/* <Modal /> */}
     </div>
   );
 };
